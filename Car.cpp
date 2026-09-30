@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
 #include "Car.hpp"
+
   Car::Car() {
-    make = "-";
-    model = "-";
-    year = 1900;
-    mpg = 0.0;
+        make = "-";
+        model = "-";
+        year = 1900;
+        mpg = 0.0;
 }
 
 void Car::printInfo() const {
