@@ -22,7 +22,3 @@ double Car::getFuelLevel() const {
     return fuelLevel;
 }
 
-int main() {
-    Car newCar;
-    std::cout << newCar.getFuelLevel() << std::endl;
-}
