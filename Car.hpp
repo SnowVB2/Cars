@@ -6,6 +6,9 @@ class Car {
         // No arg constructor
         Car();
 
+        // arg constructor
+        Car(std::string make_, std::string model_, int year_, double MPG_, double fuel_capacity_);
+
         // printInfo method
         void printInfo() const;
 
@@ -21,6 +24,7 @@ class Car {
         void setModel(const std::string& md);
         void setYear(int y);
         void setMPG(double new_mpg);
+        void setFuelCapacity(int fc);
 
 
     private:

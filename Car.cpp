@@ -2,21 +2,23 @@
 #include <string>
 #include "Car.hpp"
 
+// constructors
 // no args constructor
 Car::Car() {
     make = "-";
     model = "-";
     year = 1900;
     mpg = 0.0;
-    fuelLevel = 100;
+    fuelCapacity = 100;
 }
 
 // args constructor
-Car::Car(const std::string& mk, const std::string& mdl, int y, double car_mpg) {
-    setMake(mk);
-    setModel(mdl);
-    setYear(y);
-    setMPG(car_mpg);
+Car::Car(std::string make_, std::string model_, int year_, double MPG_ = 0, double fuel_capacity_ = 0) {
+    setMake(make_);
+    setModel(model_);
+    setYear(year_);
+    setMPG(MPG_);
+    setFuelCapacity(fuel_capacity_);
 }
 
 
@@ -37,16 +39,19 @@ double Car::getFuelLevel() const {
 }
 
 // set
-void       Car::setMake(const std::string& mk) {
+void Car::setMake(const std::string& mk) {
     make = mk;
 }
-void       Car::setModel(const std::string& md) {
+void Car::setModel(const std::string& md) {
     model = md;
 }
-void        Car::setYear(int y) {
+void Car::setYear(int y) {
     year = (y > 1900 && y < 2027) ? y : 1900;
 }
-void        Car::setMPG(double new_mpg) {
+void Car::setMPG(double new_mpg) {
     mpg = (new_mpg > 0) ? new_mpg : 0;
+}
+void Car::setFuelCapacity(int fc) {
+    fuelCapacity = fc;
 }
 
