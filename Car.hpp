@@ -26,13 +26,16 @@ class Car {
         void setMPG(double new_mpg);
         void setFuelCapacity(int fc);
 
+        void refuel(double gallons);
+        void drive(double distance);
+
 
     private:
         std::string make;
         std::string model;
         int year;
         double mpg;
-        double mileage;
+        double mileage = 0;
         double fuelCapacity;
         double fuelLevel;
 };

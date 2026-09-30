@@ -29,6 +29,26 @@ std::cout << "Make\t\t" << make << std::endl;
 std::cout << "Model\t\t" << model << std::endl;
 std::cout << "Year\t\t" << year << std::endl;
 std::cout << "MPG\t\t" << mpg << std::endl;
+std::cout << "Fuel\t\t" << fuelLevel << std::endl;
+std::cout << "Miles\t\t" << mileage << std::endl;
+}
+
+void Car::refuel(double gallons) {
+    std::cout << "Refueling..." << std::endl;
+    
+    fuelLevel += gallons;
+    double overflow = fuelLevel - fuelCapacity;
+
+    if (fuelLevel > fuelCapacity) {
+        std::cout << "Fuel added: " << gallons - overflow << std::endl;
+        std::cout << "Excess fuel: " << overflow << std::endl;
+        fuelLevel = fuelCapacity;
+    } else {
+        std::cout << "Fuel added: " << fuelLevel - overflow << std::endl;
+    }
+
+    std::cout << "Fuel level: " << fuelLevel << std::endl;
+    
 }
 
 
